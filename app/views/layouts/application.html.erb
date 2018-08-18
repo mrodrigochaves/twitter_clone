@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TwitterClone</title>
+    <title>Modelo padrão HTML TwitterClone</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,16 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+        <div class="notificações">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+    </header>
+  </div>
+    <section>
+    <%= yield %>        
+    </section>
+    <footer><p>Feito no BootCamp</p></footer>
+    
   </body>
 </html>
