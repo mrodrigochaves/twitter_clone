@@ -22,11 +22,13 @@ class User < ApplicationRecord
 
   def follow!(other_user)
   	# Este método continuara o relacionamento entre um usuário e outro.
-  	active_relationships.create(followed: other_user)
+  	#active_relationships.create(followed: other_user)
+  	following << other_user
   end
 
   def unfollow!(other_user)
   	# Este método apagará o relacionamento entre um usuário e outro.
+	following.destroy(other_user)  
   end
 
 end
